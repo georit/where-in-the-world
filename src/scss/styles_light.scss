@@ -1,0 +1,22 @@
+@import "config";
+
+/* ******general styles****** */
+body {
+  background-color: $lightModeBackground;
+  color: $lightModeText;
+  @include bodyEssentials;
+}
+
+/* ******wrapper****** */
+.wrapper {
+  width: 100%;
+}
+
+/* ******title & theme switch****** */
+@import "title_and_theme_switch_light";
+
+/* ******search & filter****** */
+@import "search_and_filter_light";
+
+/* ******countries****** */
+@import "countries_light";

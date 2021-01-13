@@ -1,0 +1,49 @@
+// ***variables***
+// ***colors***
+$darkModeElements: hsl(209, 23%, 22%);
+$darkModeBackground: hsl(207, 26%, 17%);
+$lightModeText: hsl(200, 15%, 8%);
+$lightModeInput: hsl(0, 0%, 52%);
+$lightModeBackground: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%); // dark mode text & light mode elements
+
+// ***fonts***
+$fontfam: "Nunito Sans", sans-serif;
+
+// ***mixins***
+@mixin bodyEssentials() {
+  font-family: $fontfam;
+  font-weight: 300;
+  height: 100vh;
+  max-width: 1980px;
+  width: 100vw;
+  overflow: auto;
+}
+
+@mixin flex($dir, $align, $justify) {
+  display: flex;
+  flex-flow: $dir;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin boxShadow(
+  $off-x: 0,
+  $off-y: 4px,
+  $blur: 10px,
+  $spread: 0,
+  $color: hsla(0, 0%, 0%, 0.06)
+) {
+  box-shadow: $off-x $off-y $blur $spread $color;
+}
+
+// ***general styles***
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none !important;
+}

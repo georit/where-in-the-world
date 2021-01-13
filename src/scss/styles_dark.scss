@@ -1,0 +1,22 @@
+@import "config";
+
+/* ******general styles****** */
+body {
+  background-color: $darkModeBackground;
+  color: $white;
+  @include bodyEssentials;
+}
+
+/* ******wrapper****** */
+.wrapper {
+  width: 100%;
+}
+
+/* ******title & theme switch****** */
+@import "title_and_theme_switch_dark";
+
+/* ******search & filter****** */
+@import "search_and_filter_dark";
+
+/* ******countries****** */
+@import "countries_dark";

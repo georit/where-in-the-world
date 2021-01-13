@@ -1,0 +1,68 @@
+.countries {
+  padding: 0 10% 4rem;
+  width: 100%;
+
+  .country {
+    background-color: $white;
+    border-radius: 5px;
+    cursor: pointer;
+    @include boxShadow();
+    margin: 0 auto 1.5rem;
+    max-width: 265px;
+    overflow: hidden;
+    transition: all 0.2s;
+
+    .country-flag-container {
+      height: 150px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .country-info {
+      padding: 1.5rem 1.5rem 2.5rem;
+
+      .country-name {
+        font-size: 1.1rem;
+        font-weight: 800;
+        padding-bottom: 1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 217px;
+      }
+
+      .country-population,
+      .country-region,
+      .country-capital {
+        font-size: 0.875rem;
+        padding-bottom: 0.3rem;
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+
+        .country-data {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 615px) {
+    @include flex(row wrap, center, space-between);
+    padding: 0 5% 4rem;
+
+    .country {
+      margin: 0 0 2.5rem;
+      width: 263px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        transform: scale(0.98);
+      }
+    }
+  }
+}
