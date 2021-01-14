@@ -1,0 +1,75 @@
+.country-details-container {
+  font-size: 14px;
+  padding: 0 5% 3rem;
+  width: 100%;
+
+  .btn-back {
+    background-color: $darkModeElements;
+    border: none;
+    // border-radius: 5px;
+    @include boxShadow(0, 0, 6px, 0, hsla(0, 0%, 0%, 0.2));
+    color: $white;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 3.5rem;
+
+    i {
+      font-weight: 600;
+    }
+  }
+
+  .country-flag-container {
+    background: url("https://restcountries.eu/data/bel.svg") 0 0 / cover
+      no-repeat;
+    height: 300px;
+    width: 100%;
+    max-width: 338px;
+    margin-bottom: 2.5rem;
+  }
+
+  .country-details {
+    width: 100%;
+
+    .country-name {
+      font-weight: 800;
+      padding-bottom: 1.5rem;
+    }
+
+    .country-main-details,
+    .country-other-details {
+      padding-bottom: 2rem;
+      width: 100%;
+
+      .country-detail {
+        padding-bottom: 0.6rem;
+
+        .detail-title {
+          font-weight: 600;
+        }
+      }
+    }
+
+    .border-countries-container {
+      width: 100%;
+
+      .border-countries-heading {
+        font-weight: 800;
+        padding-bottom: 0.6rem;
+      }
+
+      .border-countries {
+        @include flex(row wrap, center, flex-start);
+
+        .btn-border-country {
+          background-color: $darkModeElements;
+          border: none;
+          @include boxShadow(0, 0, 4px, 0, hsla(0, 0%, 0%, 0.1));
+          color: $white;
+          cursor: pointer;
+          margin-right: 0.4rem;
+          padding: 0.5rem 1rem;
+        }
+      }
+    }
+  }
+}
