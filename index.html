@@ -28,40 +28,48 @@
           </span>
         </div>
       </div>
+
       <!-- ******search & filter****** -->
-      <div class="search-filter-container">
-        <form class="search-form" id="search-form">
-          <label for="search-input"></label>
-          <input
-            type="text"
-            name="search-input"
-            id="search-input"
-            class="search-input"
-            placeholder="Search for a country..."
-          />
-          <i class="fas fa-search icon-search"></i>
-        </form>
-        <div class="search-filter">
-          <div class="filter-instruction" id="filter-instruction">
-            <p class="filter-instruction-text">Filter by Region</p>
-            <i
-              class="fas fa-chevron-up icon-filter-instruction"
-              id="icon-filter-instruction"
-            ></i>
-          </div>
-          <div class="filter-options hidden" id="filter-options">
-            <span class="filter-option" id="africa">Africa</span>
-            <span class="filter-option" id="americas">America</span>
-            <span class="filter-option" id="asia">Asia</span>
-            <span class="filter-option" id="europe">Europe</span>
-            <span class="filter-option" id="oceania">Oceania</span>
+      <div
+        class="search-filter-countries-container"
+        id="search-filter-countries-container"
+      >
+        <!-- ******search & filter****** -->
+        <div class="search-filter-container" id="search-filter-container">
+          <form class="search-form" id="search-form">
+            <label for="search-input"></label>
+            <input
+              type="text"
+              name="search-input"
+              id="search-input"
+              class="search-input"
+              placeholder="Search for a country..."
+            />
+            <i class="fas fa-search icon-search"></i>
+          </form>
+          <div class="search-filter">
+            <div class="filter-instruction" id="filter-instruction">
+              <p class="filter-instruction-text">Filter by Region</p>
+              <i
+                class="fas fa-chevron-up icon-filter-instruction"
+                id="icon-filter-instruction"
+              ></i>
+            </div>
+            <div class="filter-options hidden" id="filter-options">
+              <span class="filter-option" id="africa">Africa</span>
+              <span class="filter-option" id="americas">America</span>
+              <span class="filter-option" id="asia">Asia</span>
+              <span class="filter-option" id="europe">Europe</span>
+              <span class="filter-option" id="oceania">Oceania</span>
+            </div>
           </div>
         </div>
+        <!-- ******countries****** -->
+        <div class="countries" id="countries"></div>
       </div>
-      <!-- ******countries****** -->
-      <div class="countries" id="countries"></div>
     </div>
     <!-- ******scripts****** -->
-    <script src="./dist/js/app.js"></script>
+    <script src="./dist/js/main.js"></script>
+    <script src="./dist/js/detail.js"></script>
   </body>
 </html>

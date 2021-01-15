@@ -16,6 +16,7 @@
       height: 150px;
       width: 100%;
       overflow: hidden;
+      pointer-events: none;
     }
 
     .country-info {
@@ -23,6 +24,7 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      pointer-events: none;
 
       .country-name {
         font-size: 1.1rem;
