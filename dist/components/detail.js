@@ -86,8 +86,8 @@ function displayCountryDetails(data) {
     document.querySelector(".border-countries").appendChild(button);
   });
 
-  // listen for border country button clicks
-  document.querySelector(".border-countries").addEventListener("click", (e) => {
+  // listen for button clicks
+  document.getElementById("border-countries").addEventListener("click", (e) => {
     if (e.target.className === "btn-border-country") {
       // clear country details
       countryDetails.remove();
@@ -97,6 +97,10 @@ function displayCountryDetails(data) {
       );
     }
   });
+
+  document
+    .getElementById("btn-back")
+    .addEventListener("click", () => console.log("Back we shall go!"));
 }
 
 function getCurrencies(data) {
