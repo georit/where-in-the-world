@@ -169,7 +169,7 @@ countriesEl.addEventListener("click", (e) => {
     // hide homepage
     document.getElementById("search-filter-countries-container").style.display =
       "none";
-
+    // display country details
     getCountryDetailsByName(countryName).then((countryData) =>
       displayCountryDetails(countryData)
     );
