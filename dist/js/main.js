@@ -118,11 +118,15 @@ themeSwitch.addEventListener("click", () => {
     themeLink.setAttribute("href", "./dist/css/styles_dark.css");
     // change switch text
     themeSwitchText.innerText = "Light Mode";
+    //change switch icon
+    themeSwitchIcon.className = "fas fa-moon toggle-switch-icon";
   } else {
     // change stylesheet
     themeLink.setAttribute("href", "./dist/css/styles_light.css");
     // change switch text
     themeSwitchText.innerText = "Dark Mode";
+    //change switch icon
+    themeSwitchIcon.className = "far fa-moon toggle-switch-icon";
   }
 });
 
@@ -139,7 +143,9 @@ filterOptions.addEventListener("click", (e) => {
     // clean up countries
     countriesEl.innerHTML = "";
     // display filtered countries
-    getCountriesByRegion(clickedEl.id);
+    clickedEl.id === "all"
+      ? getAllCountriesData()
+      : getCountriesByRegion(clickedEl.id);
     // hide filter options
     showFilterOptions();
   }
