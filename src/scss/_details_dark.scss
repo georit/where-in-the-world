@@ -6,12 +6,12 @@
   .btn-back {
     background-color: $darkModeElements;
     border: none;
-    // border-radius: 5px;
-    @include boxShadow(0, 0, 6px, 0, hsla(0, 0%, 0%, 0.2));
     color: $white;
+    @include boxShadow(0, 0, 6px, 0, hsla(0, 0%, 0%, 0.2));
     cursor: pointer;
     padding: 0.5rem 1.5rem;
     margin-bottom: 3.5rem;
+    transition: all 0.3s;
 
     i {
       font-weight: 600;
@@ -66,8 +66,71 @@
           @include boxShadow(0, 0, 4px, 0, hsla(0, 0%, 0%, 0.1));
           color: $white;
           cursor: pointer;
-          margin-right: 0.4rem;
+          margin: 0 0.4rem 0.4rem 0;
           padding: 0.5rem 1rem;
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 685px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+    padding-top: 2rem;
+
+    .btn-back {
+      max-width: max-content;
+      grid-area: 1 / 1 / auto / span 2;
+
+      &:hover {
+        background-color: $white;
+        color: $darkModeElements;
+      }
+    }
+
+    .country-flag-container {
+      grid-area: 2 / 1 / auto / span 1;
+      min-width: 338px;
+      margin-bottom: 0;
+    }
+
+    .country-details {
+      grid-area: 2 / 2 / auto / span 1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      gap: 1rem;
+      align-content: center;
+
+      .country-name {
+        grid-area: 1 / 1 / auto / span 2;
+        padding-bottom: 0;
+      }
+
+      .country-main-details {
+        grid-area: 2 / 1 / auto / span 1;
+      }
+
+      .country-other-details {
+        grid-area: 2 / 2 / auto / span 1;
+      }
+
+      .country-main-details,
+      .country-other-details {
+        padding-bottom: 0;
+      }
+
+      .border-countries-container {
+        grid-area: 3 / 1 / auto / span 2;
+
+        .btn-border-country {
+          &:hover {
+            background-color: $white;
+            color: $darkModeElements;
+          }
         }
       }
     }
